@@ -3,9 +3,9 @@
 set -e
 
 # Tema
-xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-Dark"
+xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
 
-# Icon pack
+# Pack de iconos
 xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
 
 # Fuentes
