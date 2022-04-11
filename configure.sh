@@ -38,11 +38,3 @@ download "gtk-3.0/gtk.css"
 wget https://github.com/RaniAgus/xfce-theme/raw/main/xfce4-panel-profile.tar.bz2
 xfce4-panel-profiles load ./xfce4-panel-profile.tar.bz2
 rm -v ./xfce4-panel-profile.tar.bz2
-
-# Whiskermenu config
-whiskermenu_set() {
-  key=${1:?}
-  value=${2:?}
-  sed -i -e '/^'$key'=/ s/=.*/='$value'/' ~/.config/xfce4/panel/whiskermenu-6.rc
-}
-whiskermenu_set "button-icon" "distributor-logo-xubuntu"

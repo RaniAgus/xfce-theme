@@ -60,4 +60,3 @@ panel:
 	wget https://github.com/RaniAgus/xfce-theme/raw/main/xfce4-panel-profile.tar.bz2
 	xfce4-panel-profiles load ./xfce4-panel-profile.tar.bz2
 	rm -v ./xfce4-panel-profile.tar.bz2
-	sed -i -e '/^button-icon=/ s/=.*/=distributor-logo-xubuntu/' ~/.config/xfce4/panel/whiskermenu-6.rc
