@@ -29,10 +29,10 @@ sudo apt-get install fonts-roboto
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
 # Plugins
-sudo add-apt-repository ppa:xubuntu-dev/extras
 sudo add-apt-repository ppa:gottcode/gcppa
 sudo apt-get update && sudo apt-get install -y \
-  xfce4-docklike-plugin \
   xfce4-whiskermenu-plugin
 
-xfce4-panel -r
+# Panel
+cp -uva ./gtk-3.0/. ~/.config/gtk-3.0
+xfce4-panel-profiles load ./xfce4-panel-profile.tar.bz2
