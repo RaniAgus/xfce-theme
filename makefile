@@ -17,23 +17,13 @@ de:
 
 # Tema
 theme:
-	sudo apt-get install -y git sassc
-	git clone https://github.com/vinceliuice/Qogir-theme
-	cd Qogir-theme
-	./install.sh
-	./install.sh --tweaks round
-	cd ..
-	rm -rf Qogir-theme
-	xfconf-query -c xsettings -p /Net/ThemeName -s "Qogir-dark"
+	xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-Dark"
 
 # Icon theme
 icons:
-	git clone https://github.com/vinceliuice/Qogir-icon-theme
-	cd Qogir-icon-theme
-	./install.sh
-	cd ..
-	rm -rf Qogir-icon-theme
-	xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir-dark"
+	sudo add-apt-repository ppa:papirus/papirus
+	sudo apt-get install -y papirus-icon-theme
+	xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
 
 # Fuentes
 fonts:
