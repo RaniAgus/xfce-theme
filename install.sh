@@ -19,7 +19,7 @@ cd ..
 rm -rf Qogir-theme
 
 git clone https://github.com/vinceliuice/Qogir-icon-theme
-cd Qogir-icon-theme-
+cd Qogir-icon-theme
 ./install.sh
 cd ..
 rm -rf Qogir-icon-theme
