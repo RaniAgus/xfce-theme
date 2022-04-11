@@ -3,9 +3,7 @@
 1. Instalar interfaz `xfce` y reiniciar:
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/install.sh >> install.sh
-bash -x ./install.sh
-rm ./install.sh
+wget -qO- https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/install.sh | bash -x
 sudo reboot
 ```
 
