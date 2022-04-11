@@ -39,6 +39,8 @@ sudo add-apt-repository ppa:gottcode/gcppa
 sudo apt-get update && sudo apt-get install -y \
   xfce4-whiskermenu-plugin
 
+sed -i -e '/^button-icon=/ s/=.*/=distributor-logo-xubuntu/' ~/.config/xfce4/panel/whiskermenu-6.rc
+
 # Panel
 cp -uva ./gtk-3.0/. ~/.config/gtk-3.0
 xfce4-panel-profiles load ./xfce4-panel-profile.tar.bz2
