@@ -1,4 +1,17 @@
-#!/bin/bash
+#!/bin/bash -x
+
+# Configurar pares clave-valor
+configure() {
+  key=${1:?}
+  value=${2:?}
+  file=${3:?}
+  sed -i -e '/^'$key'=/ s/=.*/='$value'/' $file
+}
+
+download_config() {
+  file=${1:?}
+  wget -O "~/.config/$file" "https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/$file"
+}
 
 # Display server
 sudo apt-get install -y xorg openbox
@@ -7,7 +20,7 @@ sudo apt-get install -y xorg openbox
 sudo apt-get install -y lightdm lightdm-gtk-greeter
 
 # Desktop environment
-sudo apt-get install -y xfce4 xfce4-panel-profiles
+sudo apt-get install -y xfce4
 
 # Tema
 sudo apt-get install -y git sassc
@@ -39,8 +52,14 @@ sudo add-apt-repository ppa:gottcode/gcppa
 sudo apt-get update && sudo apt-get install -y \
   xfce4-whiskermenu-plugin
 
-sed -i -e '/^button-icon=/ s/=.*/=distributor-logo-xubuntu/' ~/.config/xfce4/panel/whiskermenu-6.rc
+configure "button-icon" "distributor-logo-xubuntu" "~/.config/xfce4/panel/whiskermenu-6.rc"
 
-# Panel
-cp -uva ./gtk-3.0/. ~/.config/gtk-3.0
+# GTK config
+mkdir -pv ~/.config/gtk-3.0
+download_config "gtk-3.0/bookmarks"
+download_config "gtk-3.0/gtk.css"
+
+# Perfil
+sudo apt-get install -y xfce4-panel-profiles
+wget https://github.com/RaniAgus/xfce-theme/raw/main/xfce4-panel-profile.tar.bz2
 xfce4-panel-profiles load ./xfce4-panel-profile.tar.bz2
