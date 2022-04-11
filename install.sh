@@ -1,7 +1,9 @@
 #!/bin/bash -x
 
-sudo add-apt-repository ppa:gottcode/gcppa
-sudo apt-get update && apt-get install -y \
+set -e
+
+sudo add-apt-repository -y ppa:gottcode/gcppa
+sudo apt-get update && sudo apt-get install -y \
   xorg \
   openbox \
   lightdm \
@@ -12,5 +14,3 @@ sudo apt-get update && apt-get install -y \
   fonts-roboto \
   xfce4-whiskermenu-plugin \
   xfce4-panel-profiles
-
-sudo reboot

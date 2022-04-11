@@ -1,5 +1,7 @@
 #!/bin/bash -x
 
+set -e
+
 # Tema
 git clone https://github.com/vinceliuice/Qogir-theme
 cd Qogir-theme
@@ -44,6 +46,3 @@ whiskermenu_set() {
   sed -i -e '/^'$key'=/ s/=.*/='$value'/' ~/.config/xfce4/panel/whiskermenu-6.rc
 }
 whiskermenu_set "button-icon" "distributor-logo-xubuntu"
-
-# Logout
-xfce4-session-logout --logout
