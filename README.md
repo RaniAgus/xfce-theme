@@ -1,5 +1,7 @@
 # xfce-theme
 
+![result](.img/result.png)
+
 1. Instalar interfaz `xfce` y reiniciar:
 
 ```bash
