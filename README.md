@@ -9,7 +9,9 @@ rm ./install.sh
 sudo reboot
 ```
 
-2. Loguearse usando "xfce session"
+2. Loguearse usando "Xfce Session":
+
+![Xfce Session](.img/session.png)
 
 3. Configurar tema bonito:
 
