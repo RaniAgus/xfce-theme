@@ -3,10 +3,8 @@
 set -e
 
 # Tema
-xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
-
-# Pack de iconos
-xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
+xfconf-query -c xsettings -p /Net/ThemeName -s "Qogir-dark"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir-dark"
 
 # Fuentes
 xfconf-query -c xsettings -p /Gtk/FontName -s "Roboto 10"
