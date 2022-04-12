@@ -22,6 +22,9 @@ theme:
 	./install.sh
 	cd ..
 	rm -rf Qogir-theme
+	xfconf-query -c xsettings -p /Net/ThemeName -s "Qogir-dark"
+	xfconf-query -c xfwm4 -p /general/theme -s "Qogir-dark"
+
 
 # Icon theme
 icons:
@@ -30,11 +33,13 @@ icons:
 	./install.sh
 	cd ..
 	rm -rf Qogir-icon-theme
+	xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir-dark"
 
 # Fuentes
 fonts:
 	sudo apt-get install -y fonts-roboto
 	xfconf-query -c xsettings -p /Gtk/FontName -s "Roboto 10"
+	xfconf-query -c xfwm4 -p /general/title_font -s "Roboto Bold 10"
 	bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 	xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "JetBrains Mono 10"
 
