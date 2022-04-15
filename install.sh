@@ -21,6 +21,12 @@ sudo apt-get update && sudo apt-get install -y \
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
+git clone https://github.com/vinceliuice/Qogir-theme
+cd Qogir-theme
+./install.sh
+cd ..
+rm -rf Qogir-theme
+
 git clone https://github.com/vinceliuice/Qogir-icon-theme
 cd Qogir-icon-theme
 ./install.sh
