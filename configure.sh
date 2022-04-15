@@ -14,26 +14,26 @@ xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "JetBrains Mono 10"
 
 download() {
   file=${1:?}
-  wget -O ~/.config/$file "https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/$file"
+  wget -O ~/$file "https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/$file"
 }
 
 # GNOME Terminal config
 # https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
 # https://www.linuxshelltips.com/export-import-gnome-terminal-profile/
-wget -O ./terminal.dconf https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/terminal.dconf
-dconf load /org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')/ < ./terminal.dconf
-rm ./terminal.dconf
+download "terminal.dconf"
+dconf load /org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')/ < ~/terminal.dconf
+rm ~/terminal.dconf
 
 # GTK config
 mkdir -pv ~/.config/gtk-3.0
-download "gtk-3.0/bookmarks"
-download "gtk-3.0/gtk.css"
+download ".config/gtk-3.0/bookmarks"
+download ".config/gtk-3.0/gtk.css"
 
 # Whisker Menu config
 mkdir -pv ~/.config/xfce4 ~/.config/xfce4/panel
-download "xfce4/panel/whiskermenu-6.rc"
+download ".config/xfce4/panel/whiskermenu-6.rc"
 
 # Panel profile
-wget https://github.com/RaniAgus/xfce-theme/raw/main/panel.tar.bz2
-xfce4-panel-profiles load ./panel.tar.bz2
-rm -v ./panel.tar.bz2
+download "panel.tar.bz2"
+xfce4-panel-profiles load ~/panel.tar.bz2
+rm -v ~/panel.tar.bz2
