@@ -2,6 +2,9 @@
 
 set -e
 
+sudo apt install --reinstall ca-certificates
+
+sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gottcode/gcppa
 sudo add-apt-repository -y ppa:numix/ppa
 sudo apt-get update && sudo apt-get install -y \
@@ -9,7 +12,7 @@ sudo apt-get update && sudo apt-get install -y \
   lightdm \
   lightdm-gtk-greeter \
   xfce4 \
-  git \
+  git-all \
   sassc \
   numix-blue-gtk-theme \
   fonts-roboto \
