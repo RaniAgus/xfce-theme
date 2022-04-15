@@ -34,6 +34,6 @@ mkdir -pv ~/.config/xfce4 ~/.config/xfce4/panel
 download "xfce4/panel/whiskermenu-6.rc"
 
 # Panel profile
-wget https://github.com/RaniAgus/xfce-theme/raw/main/xfce4-panel-profile.tar.bz2
-xfce4-panel-profiles load ./xfce4-panel-profile.tar.bz2
-rm -v ./xfce4-panel-profile.tar.bz2
+wget https://github.com/RaniAgus/xfce-theme/raw/main/panel.tar.bz2
+xfce4-panel-profiles load ./panel.tar.bz2
+rm -v ./panel.tar.bz2
