@@ -3,9 +3,9 @@
 set -e
 
 # Tema
-xfconf-query -c xsettings -p /Net/ThemeName -s "Qogir-dark"
-xfconf-query -c xfwm4 -p /general/theme -s "Qogir-dark"
-xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir-dark"
+xfconf-query -c xsettings -p /Net/ThemeName -s "NumixBlue"
+xfconf-query -c xfwm4 -p /general/theme -s "NumixBlue"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir"
 
 # Fuentes
 xfconf-query -c xsettings -p /Gtk/FontName -s "Roboto 10"

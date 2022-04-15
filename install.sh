@@ -3,6 +3,7 @@
 set -e
 
 sudo add-apt-repository -y ppa:gottcode/gcppa
+sudo add-apt-repository -y ppa:numix/ppa
 sudo apt-get update && sudo apt-get install -y \
   xorg \
   lightdm \
@@ -10,17 +11,12 @@ sudo apt-get update && sudo apt-get install -y \
   xfce4 \
   git \
   sassc \
+  numix-blue-gtk-theme \
   fonts-roboto \
   xfce4-whiskermenu-plugin \
   xfce4-panel-profiles
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
-
-git clone https://github.com/vinceliuice/Qogir-theme
-cd Qogir-theme
-./install.sh
-cd ..
-rm -rf Qogir-theme
 
 git clone https://github.com/vinceliuice/Qogir-icon-theme
 cd Qogir-icon-theme
