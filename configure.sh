@@ -18,6 +18,8 @@ download() {
 }
 
 # GNOME Terminal config
+# https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
+# https://www.linuxshelltips.com/export-import-gnome-terminal-profile/
 wget -O ./terminal.dconf https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/terminal.dconf
 dconf load /org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')/ < ./terminal.dconf
 rm ./terminal.dconf
