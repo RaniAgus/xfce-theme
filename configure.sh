@@ -17,6 +17,11 @@ download() {
   wget -O ~/.config/$file "https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/$file"
 }
 
+# GNOME Terminal config
+wget -O ./terminal.dconf https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/terminal.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')/ < ./terminal.dconf
+rm ./terminal.dconf
+
 # GTK config
 mkdir -pv ~/.config/gtk-3.0
 download "gtk-3.0/bookmarks"
