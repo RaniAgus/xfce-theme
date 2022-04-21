@@ -3,9 +3,9 @@
 set -e
 
 # Tema
-xfconf-query -c xsettings -p /Net/ThemeName -s "Qogir-light"
-xfconf-query -c xfwm4 -p /general/theme -s "Qogir-light"
-xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir"
+xfconf-query -c xsettings -p /Net/ThemeName -s "Numix"
+xfconf-query -c xfwm4 -p /general/theme -s "Numix"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir-ubuntu"
 
 # Fuentes
 xfconf-query -c xsettings -p /Gtk/FontName -s "Roboto 10"
