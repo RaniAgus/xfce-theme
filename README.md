@@ -9,11 +9,7 @@ wget -qO- https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/install.sh 
 sudo reboot
 ```
 
-2. Loguearse usando "Xfce Session":
-
-![Xfce Session](.img/session.png)
-
-3. Configurar tema bonito:
+2. Configurar tema bonito:
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/configure.sh | bash -x
