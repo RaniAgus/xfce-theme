@@ -26,7 +26,7 @@ git clone https://github.com/numixproject/numix-gtk-theme
 cd numix-gtk-theme
 sudo make install
 cd ..
-rm -rf numix-gtk-theme
+sudo rm -rf numix-gtk-theme
 
 git clone https://github.com/vinceliuice/Qogir-icon-theme
 cd Qogir-icon-theme
