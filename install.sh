@@ -16,16 +16,17 @@ sudo apt-get update && sudo apt-get install -y \
   gnome-keyring \
   git-all \
   sassc \
+  libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils \
   fonts-roboto \
   dconf-cli
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
-git clone https://github.com/vinceliuice/Qogir-theme
-cd Qogir-theme
-./install.sh
+git clone https://github.com/numixproject/numix-gtk-theme
+cd numix-gtk-theme
+sudo make install
 cd ..
-rm -rf Qogir-theme
+rm -rf numix-gtk-theme
 
 git clone https://github.com/vinceliuice/Qogir-icon-theme
 cd Qogir-icon-theme
