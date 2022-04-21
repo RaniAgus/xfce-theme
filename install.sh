@@ -28,6 +28,12 @@ sudo make install
 cd ..
 sudo rm -rf numix-gtk-theme
 
+git clone https://github.com/vinceliuice/Qogir-theme
+cd Qogir-theme
+./install.sh
+cd ..
+rm -rf Qogir-theme
+
 git clone https://github.com/vinceliuice/Qogir-icon-theme
 cd Qogir-icon-theme
 ./install.sh
