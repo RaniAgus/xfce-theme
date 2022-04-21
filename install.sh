@@ -13,6 +13,7 @@ sudo apt-get update && sudo apt-get install -y \
   xfce4 \
   xfce4-whiskermenu-plugin \
   xfce4-panel-profiles \
+  gnome-keyring \
   git-all \
   sassc \
   fonts-roboto \
