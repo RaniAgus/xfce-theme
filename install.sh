@@ -11,11 +11,12 @@ sudo apt-get update && sudo apt-get install -y \
   lightdm \
   lightdm-gtk-greeter \
   xfce4 \
+  xfce4-whiskermenu-plugin \
+  xfce4-panel-profiles \
   git-all \
   sassc \
   fonts-roboto \
-  xfce4-whiskermenu-plugin \
-  xfce4-panel-profiles
+  dconf-cli
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
