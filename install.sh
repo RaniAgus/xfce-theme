@@ -14,7 +14,11 @@ sudo apt-get update && sudo apt-get install -y \
   xfce4-whiskermenu-plugin \
   xfce4-panel-profiles \
   gnome-keyring \
+  openjdk-11-jdk \
   git-all \
+  mousepad \
+  xarchiver \
+  firefox \
   sassc \
   libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils \
   fonts-roboto \
