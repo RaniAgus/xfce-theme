@@ -8,8 +8,8 @@ xfconf-query -c xfwm4 -p /general/theme -s "Numix"
 xfconf-query -c xsettings -p /Net/IconThemeName -s "Qogir-ubuntu"
 
 # Fuentes
-xfconf-query -c xsettings -p /Gtk/FontName -s "Roboto 10"
-xfconf-query -c xfwm4 -p /general/title_font -s "Roboto Bold 10"
+xfconf-query -c xsettings -p /Gtk/FontName -s "Ubuntu 10"
+xfconf-query -c xfwm4 -p /general/title_font -s "Ubuntu Bold 10"
 xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "JetBrains Mono 10"
 
 download() {
