@@ -5,7 +5,7 @@ set -e
 # Tema
 xfconf-query -c xsettings -p /Net/ThemeName -s "Arc-Darker"
 xfconf-query -c xfwm4 -p /general/theme -s "Arc-Darker"
-xfconf-query -c xsettings -p /Net/IconThemeName -s "Vimix dark"
+xfconf-query -c xsettings -p /Net/IconThemeName -s "Vimix-dark"
 
 # Fuentes
 xfconf-query -c xsettings -p /Gtk/FontName -s "Ubuntu 10"
