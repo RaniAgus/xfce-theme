@@ -21,7 +21,6 @@ sudo apt-get update && sudo apt-get install -y \
   firefox \
   sassc \
   libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils \
-  fonts-roboto \
   dconf-cli
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
