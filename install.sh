@@ -4,6 +4,12 @@ set -e
 
 sudo apt install --reinstall ca-certificates
 
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" \
+  | sudo tee /etc/apt/sources.list.d/vscode.list
+rm -rf packages.microsoft.gpg
+
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo add-apt-repository -y ppa:gottcode/gcppa
 sudo apt-get update && sudo apt-get install -y \
@@ -20,7 +26,13 @@ sudo apt-get update && sudo apt-get install -y \
   xarchiver \
   firefox \
   dconf-cli \
-  arc-theme
+  arc-theme \
+  code
+
+sudo snap install clion --classic
+
+wget https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2022-03/R/eclipse-cpp-2022-03-R-linux-gtk-x86_64.tar.gz
+sudo tar xzf eclipse-cpp-*.tar.gz -C /opt
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
