@@ -24,8 +24,8 @@ sudo apt-get update && sudo apt-get install -y \
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
-git clone https://github.com/vinceliuice/vimix-icon-theme
-cd vimix-icon-theme
+git clone https://github.com/vinceliuice/Tela-icon-theme
+cd Tela-icon-theme
 ./install.sh
 cd ..
-rm -rf vimix-icon-theme
+rm -rf Tela-icon-theme
