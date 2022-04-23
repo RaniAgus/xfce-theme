@@ -37,3 +37,6 @@ download ".config/xfce4/panel/whiskermenu-6.rc"
 download "panel.tar.bz2"
 xfce4-panel-profiles load ~/panel.tar.bz2
 rm -v ~/panel.tar.bz2
+
+# Desktop entries
+download ".local/share/applications/eclipse.desktop"
