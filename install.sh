@@ -22,6 +22,7 @@ sudo apt-get update && sudo apt-get install -y \
   gnome-keyring \
   openjdk-11-jdk \
   git-all \
+  terminator \
   mousepad \
   xarchiver \
   firefox \
