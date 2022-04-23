@@ -33,6 +33,7 @@ sudo snap install clion --classic
 
 wget https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2022-03/R/eclipse-cpp-2022-03-R-linux-gtk-x86_64.tar.gz
 sudo tar xzf eclipse-cpp-*.tar.gz -C /opt
+rm eclipse-cpp-*.tar.gz
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
