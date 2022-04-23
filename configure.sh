@@ -17,12 +17,9 @@ download() {
   wget -O ~/$file "https://raw.githubusercontent.com/RaniAgus/xfce-theme/main/$file"
 }
 
-# GNOME Terminal config
-# https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
-# https://www.linuxshelltips.com/export-import-gnome-terminal-profile/
-download "terminal.dconf"
-dconf load /org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')/ < ~/terminal.dconf
-rm ~/terminal.dconf
+# Terminator config
+mkdir -pv ~/.config/terminator
+download ".config/terminator/config"
 
 # GTK config
 mkdir -pv ~/.config/gtk-3.0
@@ -30,7 +27,7 @@ download ".config/gtk-3.0/bookmarks"
 download ".config/gtk-3.0/gtk.css"
 
 # Whisker Menu config
-mkdir -pv ~/.config/xfce4 ~/.config/xfce4/panel
+mkdir -pv ~/.config/xfce4/panel
 download ".config/xfce4/panel/whiskermenu-6.rc"
 
 # Panel profile
