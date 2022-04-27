@@ -36,5 +36,5 @@ xfce4-panel-profiles load ~/panel.tar.bz2
 rm -v ~/panel.tar.bz2
 
 # Desktop entries
-mkdir -pv ~/.config/xfce4/panel
+mkdir -pv ~/.local/share/applications
 download ".local/share/applications/eclipse.desktop"
